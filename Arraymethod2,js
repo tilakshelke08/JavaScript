@@ -1,0 +1,17 @@
+//array strings 
+let heroes=["thor","hulk","ironman"];
+console.log(heroes);
+let indianhero=["shaktiman","krrish","raone","flyingjatt"];
+console.log(indianhero);
+//coccat
+let combine=console.log(heroes.concat(indianhero));
+console.log(combine);
+//add at  first
+console.log(heroes.unshift("spiderman"));
+console.log(heroes);
+//delete first
+console.log(heroes.shift());
+console.log(heroes);
+//addd,remove,replace
+console.log(heroes.splice(1,0,"antman"));//1 pos,0 remove ,antman add
+console.log(heroes);
