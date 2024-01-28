@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-size: x-large;
+            background-color: #4061a3;
+            margin: auto;
+            width: 800px;
+            color: white;
+        }
+
+        div {
+            margin-top: 20px;
+            border: 3px solid white;
+            padding: 20px;
+        }
+
+        p {
+            position: absolute;
+            padding: 0%;
+            top: -7px;
+            left: 105px;
+            margin: 9px;    
+            font-size: larger;
+            background-color: #4061a3 ;
+        }
+
+        input, select {
+            padding: 6px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            width: ;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Registration Details</p>
+
+        <table>
+            <tr>
+                <td>University:</td>
+                <td><input type="text"></td>
+            </tr>
+            
+            <tr>
+                <td>Institute:</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Branch:</td>
+                <td>
+                    <select name="branch" style="font-size: large;">
+                        <option value="">------Select-------</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ET&T">ET&T</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                        <option value="IT">IT</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Degree:</td>
+                <td>
+                    <select name="degree" style="font-size: large;">
+                        <option value="">------Select-------</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="MBA">MBA</option>
+                        <option value="M Tech">M Tech</option>
+                        <option value="M.A.">M.A.</option>
+                        <option value="M.Com.">M.Com.</option>
+                    </select>
+                    
+                    <label><input type="radio" name="btn">Pursuing</label>
+                    <label><input type="radio" name="btn">Completed</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Average CPI:</td>
+                <td>
+                    <input type="number" id="cpi" style="width: 50px;">
+                    Upto <input type="number" id="cpiSemester" style="width: 50px;">th Semester
+                </td>
+            </tr>
+
+            <tr>
+                <td>Experience : </td>
+                <td><input type="number" style="width: 50px;"></td>
+
+            </tr>
+            <tr>
+                <td>Your wbesite or blog : </td>
+                <td><input type="text" value="http://"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
