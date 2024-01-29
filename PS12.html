@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #p1{
+            position: absolute;
+            background-color: blue;
+            width: 200px;
+            padding: 0px;
+            top:-1px;
+            border-radius: 10px;
+            
+        }
+
+        #p2{
+            position: absolute;
+            background-color: blue;
+            width: 150px;
+            padding: 0px;
+            border-radius: 20px;
+            top: 310px;
+        }
+
+        body {
+            margin: 30px;
+            font-size: larger;
+            background-color: black;
+            color: white;
+            width: 800px;
+            
+        }
+
+        div{
+            border: 2px solid blue;
+            border-radius: 20px;
+            padding: 30px;
+            
+        }
+        
+        input{
+            margin-bottom: 6px;
+            padding: 5px;
+            background-color: black;
+            border: 2px solid white;
+        }
+        button{
+            margin-left: 100px;
+            font-size: medium;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+    <div>
+        <p id="p2">Name and Address </p>
+        <table>
+            <tr>
+                <td>
+                    SSN :
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Full Name : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Street And Number : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Postal Code : </td>
+                <td><input type="text" ></td>
+            </tr>
+            <tr>
+                <td>CIty : </td>
+                <td><input type="text" ></td>
+            </tr>
+
+        </table>
+    </div>
+    <br><br>
+    
+    <div>
+        <p id="p1">Username and Passowrd</p>
+        <table>
+            <tr>
+                <td>Username : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Passowrd : </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <input type="checkbox" >
+                
+                    Show Passowrd
+                </td>
+            </tr>
+        </table>
+    </div><br>
+    <button>Register</button>
+    </form>
+
+</body>
+
+</html>
