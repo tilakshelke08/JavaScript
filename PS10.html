@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            font-size: larger;
+            min-height: 100vh;
+            background: linear-gradient(to right, cyan,white)
+        }
+
+        div {
+
+            padding: 50px;
+            border: 2px solid black;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            ;
+        }
+
+        input {
+            width: 500px;
+            margin-bottom: 16px;
+            padding: 5px;
+        }
+
+        #a{
+            position: absolute;
+            top: 128px; /* Adjust this value to position the p tag */
+            left: 50px; /* Adjust this value to position the p tag */
+            margin: 9px;
+            padding: 0;
+            background-color:cyan;
+           
+        }
+
+        #b{
+            position: absolute;
+            top: 602px; /* Adjust this value to position the p tag */
+            left: 50px; /* Adjust this value to position the p tag */
+            margin: 9px;
+            padding: 0;
+            background-color:cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><u>Appointment Scheduler</u></h1>
+    
+        <form action="post">
+        
+        <div>
+            <p id="a">Personal Information</p>
+            <label for="">Name : </label>  <input type="text" name="" id="">
+            <label for="">Telephone Number : </label><input type="text" name="" id="">
+            <label for="">E-mail Address : </label> <input type="text" name="" id="">
+            <label for="">Date of Birth : </label><input type="date" name="" id="">
+        </div>
+<br><br><br>
+        <div>
+            <p id="b">Appointment Request</p>
+            <label for="">What is the reason of your visit? </label>  <input type="text" name="" id="">
+            <label for="">Current pain level :</label><input type="range" name="" id="">
+            <label for="">Preferred Date : </label> <input type="date" name="" id="">
+            <label for="">Preferred Time : </label><input type="time" name="" id="">
+        </div>
+        <br>
+        <button style="font-size: larger; padding: 2px; font-family: 'Times New Roman', Times, serif;">Submit</button>
+
+        </form>
+    
+
+
+
+</body>
+
+</html>
