@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        form{
+            width: 600px;
+            margin: auto;
+        }
+
+        label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input,textarea,select{
+
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        input[type="button"]{
+            background-color: rgb(73, 179, 105);
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        .required::after{
+
+            content: "*";
+            color: red;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <form>
+
+        <h1 align="center">Group Members</h1>
+        
+        <p>
+            Thank you for using our sports website.
+            Please provide your feedback on any problems or difficulties you faced during the purchasing process.
+        </p>
+
+        <label>Type of problem : </label>
+        <select name="required" id="" required>
+            <option value="">Technical(e.g., website is down)</option>
+            <option value="">Product no avilable</option>
+            <option value="">Missing information about the product </option>
+        </select>
+
+        <label for="" class="required">Username :</label>
+        <input type="text" name="" id="" required>
+
+        <label for="" class="required">Email :</label>
+        <input type="email" name="" id="" required>
+        
+        <label for="" class="required">Location :</label>
+        <input type="text" name="" id="" required>
+
+        <label for="" class="required">Phone :</label>
+        <input type="text" name="" id="">
+
+        <label for="" class="required">Description of the problem :</label>
+        <textarea name="" id="" cols="30" rows="10" required></textarea>
+
+        <label for="notification" class="notification-label"><i>Notification of Problem Solved:</i></label>
+        <input type="checkbox" id="notification" name="notification">
+
+        <input type="button" name="" id="" value="Submit">
+
+
+    </form>
+</body>
+</html>
