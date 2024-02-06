@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-size: larger;
+        }
+    </style>
+
+    <script>
+        
+        showResult=()=>{
+
+            var value=parseInt(document.getElementById("value").value);
+            var message=document.getElementById("message").value;
+            if(isNaN(value)){
+                alert("Please enter an integer!!!")
+            }
+
+            result="";
+            for(var i=1;i<value;i++){
+                result+=message+"<br>";
+
+
+            }
+
+
+            document.getElementById("result").innerHTML=result;
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h3>2. Accept an integer value and a message from user and print the message that many number of times.</h1>
+
+    <label for="value">Enter a value : </label><br>
+    <input type="number"  id="value"><br><br>
+
+    <label for="message">Enter a message : </label><br>
+    <input type="text"  id="message"><br><br>
+
+    <button onclick="showResult()">Show Result</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
