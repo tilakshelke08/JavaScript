@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS (popper.js and bootstrap.js are required for certain components) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: xx-large;
+        }
+
+        body {
+            margin: 30px;
+            font-size: x-large;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+            document.getElementById("n").focus();
+        }
+
+        showEven = () => {
+            var n = document.getElementById("n").value;
+            var evenNumbers = "";
+            if (isNaN(n)) {
+                alert("Enter integer value!!!")
+                return;
+            }
+            for (var i = 0; i <= n; i++) {
+                if (i % 2 == 0) {
+                    evenNumbers += " " + i + ",";
+
+                    console.log(i)
+                }
+            }
+
+
+
+            document.getElementById("n").value = "";
+            evenNumbers += evenNumbers.substring(0, evenNumbers.length - 1)
+            document.getElementById("even").innerHTML = "Even numbers from 0 to " + n + " :- " + evenNumbers;
+
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <p>3. Write a function to list all even numbers less than or equal to the number n. Take the value of n as input
+        from user. Use while loop</p>
+
+    <label for="n">Enter the value upto which you want the even number :</label><br><br>
+    <input type="number" id="n"><br><br>
+    <button type="button" class="btn btn-primary btn-lg" onclick="showEven()">Show Result</button><br><br>
+    <p id="even" style="border: 2px solid black;"></p>
+</body>
+
+</html>
