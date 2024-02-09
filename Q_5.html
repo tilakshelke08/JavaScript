@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Bootstrap JS (popper.js and bootstrap.js are required for certain components) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-size: larger;
+            margin: 30px;
+            font-family: serif;
+        }
+        p{
+            font-size: xx-large;
+        }
+        input{
+            font-size: larger;
+        }
+        label{
+            font-size: xx-large;
+        }
+        div{
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        showTable = () => {
+    var n = parseInt(document.getElementById("n").value);
+
+    // Check if n is a valid number
+    if (isNaN(n)) {
+        alert("Enter integer value!!!");
+        return;
+    }
+
+    var result = "<table class='table table-bordered'><thead><tr><th>Multiplier</th><th>Result</th></tr></thead><tbody>";
+    
+    // Generate the multiplication table
+    for (var i = 1; i <= 10; i++) {
+        result += "<tr><td>"+n + ' * ' + i + "</td>" +"<td>"+ n * i +"</td></tr>"+ "\n";
+    }
+
+    // Display the result with newlines
+    document.getElementById("show").innerHTML = result;
+
+    // Clear input field and set focus
+    document.getElementById("n").value = "";
+    document.getElementById("n").focus();
+};
+
+    </script>
+</head>
+<body>
+    <p>5. Write a program to print the multiplication table of a given number up to 10 multiples. </p>
+
+    <label for="n">Enter number : </label><br><br>
+    <input type="number" placeholder="Enter number" id="n"><br><br>
+
+    <button type="button" class="btn btn-secondary btn-lg" onclick="showTable()" >Show Table</button>
+    <br><br>
+    <div id="show"></div>
+</body>
+</html>
