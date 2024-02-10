@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS (popper.js and bootstrap.js are required for certain components) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: larger;
+            margin: 30px;
+        }
+        p{
+            font-size: x-large;
+        }
+        label{
+            font-size: larger;
+        }
+        input{
+            font-size: larger;
+        }
+    </style>
+    <script>
+        sum=()=>{
+            let n=temp=parseInt(document.getElementById("n").value);
+            let sum=0;
+            if(isNaN(n)){
+                alert("Enter integer value!!!")
+                return;
+            }
+            while(n!==0){
+                let i=n%10;
+                sum+=i;
+                n=Math.floor(n/10);
+            }
+            document.getElementById("result").innerHTML="Sum of digits of "+temp+" is "+sum
+            document.getElementById("n").value="";
+            document.getElementById("n").focus();
+
+
+        }
+    </script>
+</head>
+<body>
+    <p>6. Write a program to find sum of digits of given five-digit number.</p>
+    <label for="n">Enter a five number :</label><br><br>
+    <input type="text" pattern="\d{5}" name="" id="n"  maxlength="5" >
+    <br><br>
+   <button type="button" class="btn btn-secondary btn-lg" aria-placeholder="Enter a five digit number"]]]]]]]]] onclick="sum()" >Result</button><br>
+   <p id="result"></p>
+</body>
+</html>
