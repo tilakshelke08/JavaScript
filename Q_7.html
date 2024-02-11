@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: x-large;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+            background: linear-gradient(to right ,rgb(0, 255, 255),rgb(255, 255, 255));
+           
+        }
+        input{
+            font-size: x-large;
+            border: 1px solid black;
+            color: cadetblue;
+            
+        }
+        button{
+            border: 2px solid black;
+            background: linear-gradient(to right,cyan,white);
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+       
+    </style>
+    <script>
+        min=()=>{
+            let userInput=document.getElementById("numbers").value;
+            let numbers=userInput.replace(/,+$/, '').split(',').map(Number);
+            if(numbers.some(isNaN)){
+                alert("Enter integer only!!!");
+                return ;
+            }
+            if(numbers.length===0){
+                alert("No value inserted!!!");
+                return ;
+            }
+            let minValue=numbers[0];
+
+            for(let i=0;i<numbers.length;i++){
+                if(numbers[i]<minValue){
+                    minValue=numbers[i];
+                }
+            }
+            document.getElementById("input").innerHTML="Input : "+userInput.substring(0,userInput.length-1);
+            document.getElementById("result").innerHTML="Minimum value : "+minValue
+            document.getElementById("numbers").value="";
+            document.getElementById("numbers").focus();
+        }
+    </script>
+</head>
+<body>
+    <div>
+    <p>7. Write a program min() that takes any number of arguments and returns minimum number in the set of
+        arguments. Do not use the Math predefined obje</p>
+        <br>
+        <label for="numbers">Enter comma separated numbers :</label><br><br>
+        <input type="text" id="numbers" placeholder="eg. 2,3,4,5,6"><br><br>
+        <button id="btn" onclick="min()">Find minimum value</button>
+        <p id="input"></p>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
