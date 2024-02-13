@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        p{
+            font-size: x-large;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 30px;
+            font-size: x-large;
+        }
+        input{
+            font-size: large;
+        }
+        
+    </style>
+    <script>
+        pow=()=>{
+
+            let base=parseInt(document.getElementById("base").value);
+            let power=parseInt(document.getElementById("power").value);
+           if(isNaN(base) || isNaN(power)){
+            alert("Enter integer value!!!")
+            document.getElementById("base").value="";
+            document.getElementById("power").value="";
+            document.getElementById("base").focus();
+            return;
+           }
+            let exp=1
+            for(let i=1;i<=power;i++){
+                exp*=base;
+            }
+            document.getElementById("result").innerHTML= "Result : "+exp;
+            document.getElementById("base").value="";
+            document.getElementById("power").value="";
+            document.getElementById("base").focus();            
+
+        }
+    </script>
+</head>
+<body>
+    <p>8. Write a function pow(x,y) that calculates xy. Do not use the Math predefined objet</p>
+    <label for="base">Enter base : </label><br>
+    <input type="number" id="base" >
+    <br><br>
+    <label for="power">Enter power : </label><br>
+    <input type="number" id="power">
+    <br><br>
+    <button type="button" class="btn btn-success" onclick="pow()" style="font-size: large;">Find exponant </button><br>
+    <br>
+    <p id="result"></p>
+</body>
+</html>
