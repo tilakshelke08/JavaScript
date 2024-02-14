@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        p {
+            font-size: x-large;
+            
+            
+        }
+
+        body {
+            margin: 30px;
+        }
+        hr{
+            border-top: 2px dashed black ;
+        }
+        div{
+            margin: auto;
+
+        }
+        input{
+            font-size: larger;
+            margin-top: 10px;
+            
+        }
+        label{
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        calculateCI=()=>{
+            let p=document.getElementById("p").value;
+            let r=document.getElementById("r").value;
+            let t=document.getElementById("t").value;
+
+            if(isNaN(p) || isNaN(r) || isNaN(t) ){
+                alert("Enter integer value!!!")
+                return;
+            }
+
+            let CI = (p * (1 + r / 100)**t)-p;
+            let roundoffCI=CI.toFixed(2);
+            document.getElementById("ci").value=roundoffCI;
+            document.getElementById("p").value="";
+            document.getElementById("r").value="";
+            document.getElementById("t").value="";
+            document.getElementById("p").focus();
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        9. Create a web page to calculate the Compound Interest using the formula given below:
+        Compound Interest =
+        Where: <br>
+        p = Principal, <br>
+        r = Rate of Interest, <br>
+        n = period in years
+    </p>
+    <hr>
+    <p align="center" style="font-size: 40px;"><u>*********CALCULATE COMPOUND INTEREST**********</u></p>
+    <hr>
+    <div align="center"><br>
+        <table>
+            <tr><td>
+        <label for="p">Principal : </label></td>
+        <td>
+        <input type="number" id="p"><br>
+        </td></tr>
+
+        <tr><td>
+        <label for="r">Rate of interest : </label></td>
+        <td>
+        <input type="number" id="r"><br>
+         </td></tr>
+
+         <tr><td>
+        <label for="t">Period : </label></td>
+        <td>
+        <input type="number" id="t">
+        </td></tr>
+        <tr>
+        <td>
+         <label for="ci">Compound Interest : </label></td>
+         <td>
+         <input type="text" id="ci" readonly>   
+        </td>
+    </tr>
+    </table>
+    <br>
+    <button type="button" class="btn btn-success" onclick="calculateCI()" style="font-size: large;">Cacluate </button><br>
+    
+    </div>
+</body>
+
+</html>
