@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Date Display</h1>
+  <div id="dateDisplay"></div>
+  <div id="greeting"></div>
+  <div id="daysLeft"></div>
+
+  <script>
+    // Function to get the day of the week in a more readable format
+    function getDayOfWeek() {
+      const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const today = new Date();
+      const dayIndex = today.getDay();
+      return daysOfWeek[dayIndex];
+    }
+
+    // Function to get a suitable greeting based on the time of the day
+    function getGreeting() {
+      const today = new Date();
+      const currentHour = today.getHours();
+
+      if (currentHour < 12) {
+        return 'Good Morning';
+      } else if (currentHour < 17) {
+        return 'Good Afternoon';
+      } else {
+        return 'Good Evening';
+      }
+    }
+
+    // Function to calculate the number of days left until the end of the year
+    function getDaysLeft() {
+      const today = new Date();
+      const currentYear = today.getFullYear();
+      const endOfYear = new Date(currentYear, 11, 31); // Month is 0-indexed, so December is 11
+      const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
+      const daysLeft = Math.round((endOfYear - today) / oneDay);
+
+      return daysLeft;
+    }
+
+    // Function to update the display
+    function updateDisplay() {
+      const dayOfWeek = getDayOfWeek();
+      const greeting = getGreeting();
+      const daysLeft = getDaysLeft();
+
+      const dateDisplay = document.getElementById('dateDisplay');
+      dateDisplay.textContent = `Today is ${dayOfWeek}, ${today.toDateString()}, Welcome, and ${greeting} to You.`;
+
+      const daysLeftDisplay = document.getElementById('daysLeft');
+      daysLeftDisplay.textContent = `Number of days left till end of year: ${daysLeft}`;
+    }
+
+    // Call the updateDisplay function when the page loads
+    window.onload = updateDisplay;
+  </script>
+</body>
+</html>
