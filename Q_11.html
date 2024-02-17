@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       function getWeekDay(date){
+            const daysOfWeekShort=['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            console.log(date.getDate());
+            const dayIndex=date.getDay();
+            return daysOfWeekShort[dayIndex];
+        }
+        let date=new Date();
+        console.log(getWeekDay(date));
+       document.write(date+" is "+getWeekDay(date));
+        
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
