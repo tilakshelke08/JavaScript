@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    p{
+      font-size: x-large;
+    }
+    body{
+      font-size: x-large;
+      margin: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    input{
+      font-size: medium;
+      width: 300px;
+      
+    }
+    button{
+      margin-top: 5px;
+
+    }
+
+  </style>
+  <script>
+    var emplist=[];
+    addEmp=()=>{
+      
+      var empname=document.getElementById("emp").value.trim();
+      if(emp===""){
+        alert("Enter name!!!")
+        return;
+      }
+
+      if(!isNaN(empname)){
+        alert("Enter text only!!!")
+        return;
+      }
+      emplist.push(empname);
+      document.getElementById("emp").value="";
+      document.getElementById("emp").focus();
+    }
+    dispEmp=()=>{
+      var sortedEmpList=emplist.slice().sort();
+      var displayText="<strong> EMPLOYEE LIST </strong><ul>"
+      sortedEmpList.forEach(function(employee){
+        displayText+="<li>"+employee+"</li>"
+      })  
+      displayText+="</ul>"
+      document.getElementById("disp").innerHTML=displayText;
+    }
+  </script>
+</head>
+<body>
+  <p>12. Accept and store names of 6 employees into array and display in sorted order of names.</p>
+  <label for="emp">Enter Employee :</label><br>
+  <input type="text" id="emp"><br>
+  <button type="button" class="btn btn-success" onclick="addEmp()" style="font-size: large;">Add Employee </button>
+  <button type="button" class="btn btn-primary" onclick="dispEmp()" style="font-size: large;">Display Employee </button><br><br>
+  <p id="disp"></p>
+</body>
+</html>
