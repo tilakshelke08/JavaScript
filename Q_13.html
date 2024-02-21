@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+            font-size: larger;
+            font-family: 'Times New Roman', Times, serif;
+        }
+      
+    </style>
+    <script>
+        class emp{
+            constructor(empid,empname,empsal){
+                this.empid=empid;
+                this.empname=empname;
+                this.empsal=empsal;
+            }
+         }
+        var empList=[];
+        
+        addEmp=()=>{
+
+            var empid=document.getElementById("empid").value;
+            var empname=document.getElementById("empname").value;
+            var empsal=document.getElementById("empsal").value;
+
+            empDetails=new emp(empid,empname,empsal);
+            empList.push(empDetails);
+
+            document.getElementById("empid").value=""
+            document.getElementById("empname").value=""
+            document.getElementById("empsal").value=""
+            document.getElementById("empid").focus();
+
+        }
+
+        dispEmp=()=>{
+            var displayText="<strong> EMPLOYEE LIST</strong><table class='table table-striped'><thead><tr><th>Employee Id</th><th>Employee Name</th><th>Employee Salary</th></thead><tbody>"
+            empList.forEach(function(employee){
+                displayText+="<tr>";
+                    displayText+="<td>"+employee.empid+"</td>";
+                    displayText+="<td>"+employee.empname+"</td>";
+                    displayText+="<td>"+employee.empsal+"</td>";
+                displayText+="</tr>";
+
+            })
+            displayText+="</tbody></table>";
+            document.getElementById("disp").innerHTML=displayText;
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Employee Id</label>
+          <input type="email" class="form-control" id="empid" placeholder="Enter Id"  required>
+      
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Employee Name</label>
+          <input type="text" class="form-control" id="empname" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Salary</label>
+            <input type="text" class="form-control" id="empsal" placeholder="Enter Salary " required>
+          </div>
+       
+        <button type="submit" class="btn btn-primary" onclick="addEmp()">Add Employee</button>
+        <button type="submit" class="btn btn-primary" onclick="dispEmp()">Display Employee</button>
+      </form><br>
+      <div id="disp"></div>
+</body>
+</html>
