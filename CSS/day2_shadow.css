@@ -1,0 +1,14 @@
+h1{
+  text-shadow:2px 3px 3px yellow;
+  color: black;
+}
+#row{
+  border: 2px solid black;
+  background-color: aqua;
+  height: 200px;
+  width: 200px;
+font-size: larger;
+box-shadow: 15px 15px 15px red,15px 15px 15px purple;
+
+  
+}

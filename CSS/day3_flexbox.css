@@ -1,0 +1,16 @@
+.Group{
+  border: 1px solid green;
+ 
+  height: 300px;
+  display: flex;
+  flex-direction: row;  /* for verticala & horizontal */
+  flex-wrap: wrap;  
+  justify-content: space-between;  /* it is used for rigth ,left, center, and for between space */   /* wrap used in iinspect mode user wise displahy size change */
+align-content: center; /* content in one row*/
+
+}
+.Row1{
+  border: 1px solid purple;
+background-color: aqua;
+
+}
