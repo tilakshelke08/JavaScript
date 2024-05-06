@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding:0;
+box-sizing: border-box;
+
+
+}
+.box1{
+  /* height: 100px;
+  width: 100px; */
+
+background-color: aqua;
+display: 10 grid ;
+height: 500px;
+grid-template-columns:(4,1fr) ;
+grid-template-rows: (3,1fr); 
+ border: 3px solid black;
+ gap: 30px;
+
+grid-row-start: 1;
+grid-row-end: 5;
+ 
+}
