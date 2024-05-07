@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper{
+  background-color: yellow;
+  border: 1px solid black;
+  height: 500px;
+  width: 100vw;
+
+}
+.box{
+  background-color: pink;
+  border: 1px solid red;
+  height: 200px;
+  width: 200px;
+
+  /* Animations commands */
+  animation-name: Tilak;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay:2s;
+/* animation-direction: reverse; */
+animation-direction: alternate ;
+transition: 0.1s;
+
+}
+/* @keyframes Tilak{
+  from{
+width: 400px;
+  } to{
+    width: 1500px;
+  }
+} */
+
+@keyframes Tilak{
+  0%{
+    width: 300px;
+     background-color: orange;
+  } 30%{
+    width: 35%;
+    background-color: orange;
+  }60%{
+    width: 65%;
+    background-color: white;
+  }80%{
+    width: 85%;
+    background-color: green;
+  }100%{
+    width: 95%;
+    background-color: green;
+  }
+}
+
+.box:hover{
+  background-color: aquamarine;
+}

@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+#container{
+  border: 1px solid green;
+  background-color: yellow;
+  height: 500px;
+  width: 500px;
+  
+}
+.box{
+  border: 2px solid red;
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+  display: flex;
+ align-items: center;
+ /* transition:0.8s; */
+transform: transform  10s ease-in ; 
+
+}
+.box:hover{
+  /* transform: rotate(360deg); */
+
+  transform:translateX(500px);
+  background-color:skyblue;
+}

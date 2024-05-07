@@ -1,0 +1,27 @@
+/* for global function  */
+:root{
+  --TextColor:rgb(0, 255, 42);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+
+}
+#wrapper{
+  border: 2px solid brown;
+  background-color: yellow;
+  width: 300px;
+  height: 300px;
+}
+
+.box{
+  border: 1px solid green;
+  background-color: red;
+  /* tnis is valid only for this " .box"  */
+
+--color1:red;       /* function write   */
+  color: blue;
+  color:var(--color1);  /* function implement   */
+ background-color: var(--TextColor);
+}
