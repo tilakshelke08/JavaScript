@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>plus_minus_project</title>
+  <!-- tailwind connected -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[grey] gap-10">
+    <div class="text-[yellow] font-medium text-[30px]">Increment & Decrement</div>
+    <div class=" bg-white flex text-[25px] flex-row gap-12 p-3 px-5 text-[#344151] rounded-sm">
+      <!-- minus button -->
+      <button onclick="decrement()" class="border-r-2 border-[#bfbfbf] pr-5">
+        <!--minus symbol  -->
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <div id="content" class="font-bold">
+        0
+      </div>
+      <!-- plus button -->
+      <button onclick="increment()" class="border-l-2 border-[#bfbfbf] pl-5">
+        <!--plus symbol  -->
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </div>
+  <!-- symbol library connected -->
+  <script src="https://kit.fontawesome.com/6168fd3e54.js" crossorigin="anonymous"></script>
+  <!-- javscript file connected -->
+  <script src="plus_minus_project.js"></script>
+</body>
+
+</html>
